@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">SmokeScenario</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">176.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">SmokeScenario &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">testcases.VerifyLoginPage</td><td><a href="#m1"><b>TearDown</b>  </a></td><td class="numi">1</td><td>1488185377459</td><td class="numi">0</td></tr>
+<tr class="failedeven"><td rowspan="1">testcases.VerifyHomePage</td><td><a href="#m2"><b>TearDown</b>  </a></td><td class="numi">1</td><td>1488185433639</td><td class="numi">0</td></tr>
+<tr><th colspan="4">SmokeScenario &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">testcases.VerifyLoginPage</td><td><a href="#m3"><b>testHomepage</b>  </a></td><td class="numi">1</td><td>1488185272974</td><td class="numi">104431</td></tr>
+<tr class="failedeven"><td rowspan="1">testcases.VerifyHomePage</td><td><a href="#m4"><b>testHomepage</b>  </a></td><td class="numi">1</td><td>1488185387179</td><td class="numi">46459</td></tr>
+</table>
+<h1>SmokeScenario</h1>
+<h2 id="m1">testcases.VerifyHomePage:TearDown</h2>
+<div style="padding-left:3em">
+<p>Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Unable to find executable for: taskkill</p>
+org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
+<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:254)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:208)
+<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:125)
+<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
+<br/>at org.openqa.selenium.firefox.FirefoxBinary.quit(FirefoxBinary.java:246)
+<br/>at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.quit(NewProfileExtensionConnection.java:194)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.quit(FirefoxDriver.java:451)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.stopClient(FirefoxDriver.java:389)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:500)
+<br/>at factory.BrowserFactory.closeBrowser(BrowserFactory.java:42)
+<br/>at testcases.VerifyHomePage.TearDown(VerifyHomePage.java:39)
+<br/>30 lines not shown
+<p>Caused by Unable to find executable for: taskkill</p>
+com.google.common.base.Preconditions.checkNotNull(Preconditions.java:251)
+<br/>at org.openqa.selenium.os.UnixProcess.&lt;init&gt;(UnixProcess.java:62)
+<br/>at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:38)
+<br/>at org.openqa.selenium.os.WindowsUtils.killPID(WindowsUtils.java:178)
+<br/>at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
+<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:254)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:208)
+<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:125)
+<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
+<br/>at org.openqa.selenium.firefox.FirefoxBinary.quit(FirefoxBinary.java:246)
+<br/>at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.quit(NewProfileExtensionConnection.java:194)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.quit(FirefoxDriver.java:451)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.stopClient(FirefoxDriver.java:389)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:500)
+<br/>at factory.BrowserFactory.closeBrowser(BrowserFactory.java:42)
+<br/>at testcases.VerifyHomePage.TearDown(VerifyHomePage.java:39)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">testcases.VerifyLoginPage:TearDown</h2>
+<div style="padding-left:3em">
+<p>Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Unable to find executable for: taskkill</p>
+org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
+<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:254)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:208)
+<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:125)
+<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
+<br/>at org.openqa.selenium.firefox.FirefoxBinary.quit(FirefoxBinary.java:246)
+<br/>at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.quit(NewProfileExtensionConnection.java:194)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.quit(FirefoxDriver.java:451)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.stopClient(FirefoxDriver.java:389)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:500)
+<br/>at factory.BrowserFactory.closeBrowser(BrowserFactory.java:42)
+<br/>at testcases.VerifyLoginPage.TearDown(VerifyLoginPage.java:45)
+<br/>30 lines not shown
+<p>Caused by Unable to find executable for: taskkill</p>
+com.google.common.base.Preconditions.checkNotNull(Preconditions.java:251)
+<br/>at org.openqa.selenium.os.UnixProcess.&lt;init&gt;(UnixProcess.java:62)
+<br/>at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:38)
+<br/>at org.openqa.selenium.os.WindowsUtils.killPID(WindowsUtils.java:178)
+<br/>at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
+<br/>at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:254)
+<br/>at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:208)
+<br/>at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:125)
+<br/>at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
+<br/>at org.openqa.selenium.firefox.FirefoxBinary.quit(FirefoxBinary.java:246)
+<br/>at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.quit(NewProfileExtensionConnection.java:194)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.quit(FirefoxDriver.java:451)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.stopClient(FirefoxDriver.java:389)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:500)
+<br/>at factory.BrowserFactory.closeBrowser(BrowserFactory.java:42)
+<br/>at testcases.VerifyLoginPage.TearDown(VerifyLoginPage.java:45)
+<br/>30 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">testcases.VerifyHomePage:testHomepage</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at testcases.VerifyHomePage.testHomepage(VerifyHomePage.java:33)
+<br/>28 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">testcases.VerifyLoginPage:testHomepage</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for presence of element located by: By.xpath: //li[@id=&apos;link1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;INBGQT-LT-0111&apos;, ip: &apos;10.50.201.140&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=33.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 70a4ad45-341f-44fa-936b-0fbdb5f98cdc</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+<br/>at pages.LogInPage.verifyMyOrder(LogInPage.java:42)
+<br/>at testcases.VerifyLoginPage.testHomepage(VerifyLoginPage.java:39)
+<br/>28 lines not shown
+<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@id=&apos;link1&apos;]&quot;}
+Command duration or timeout: 76.97 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;INBGQT-LT-0111&apos;, ip: &apos;10.50.201.140&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=33.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 70a4ad45-341f-44fa-936b-0fbdb5f98cdc
+*** Element info: {Using=xpath, value=//li[@id=&apos;link1&apos;]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+<br/>at pages.LogInPage.verifyMyOrder(LogInPage.java:42)
+<br/>at testcases.VerifyLoginPage.testHomepage(VerifyLoginPage.java:39)
+<br/>28 lines not shown
+<p>Caused by Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@id=&apos;link1&apos;]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;INBGQT-LT-0111&apos;, ip: &apos;10.50.201.140&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
+Driver info: driver.version: unknown</p>
+&lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/RISHEK~1.KUM/AppData/Local/Temp/anonymous4102169841138602126webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:11187)
+<br/>at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/RISHEK~1.KUM/AppData/Local/Temp/anonymous4102169841138602126webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:792)
+<br/>1 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>
